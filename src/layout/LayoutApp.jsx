@@ -3,13 +3,12 @@ import Sidebar from '../components/Sidebar';
 
 export default function DashboardLayout() {
   return (
-    <div className="flex min-h-screen bg-white text-gray-800 font-sans">
-      {/* Sidebar Kiri */}
+    <div className="flex min-h-screen bg-slate-950 font-sans antialiased text-slate-100">
       <Sidebar />
-
-      {/* Area Konten Dinamis di Kanan */}
-      <main className="flex-1 p-8 overflow-y-auto">
-        <Outlet />
+      <main className="flex-1 p-10 overflow-y-auto">
+        <div className="max-w-4xl mx-auto">
+          <Outlet />
+        </div>
       </main>
     </div>
   );

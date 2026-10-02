@@ -1,3 +1,4 @@
+
 import { NavLink } from 'react-router';
 
 export default function Sidebar() {
@@ -9,25 +10,25 @@ export default function Sidebar() {
   ];
 
   return (
-    <aside className="w-64 bg-gray-100 border-r border-gray-200 min-h-screen p-4 flex flex-col shrink-0">
-      {/* Logo / Judul */}
-      <div className="flex items-center gap-2 mb-8 px-3 py-2 font-semibold text-lg text-gray-900">
-        <span className="text-xl">📚</span>
+    <aside className="w-64 bg-slate-900 text-slate-300 min-h-screen p-4 flex flex-col shrink-0 border-r border-slate-800 shadow-xl">
+      {/* Header / Logo */}
+      <div className="flex items-center gap-2 mb-8 px-3 py-2 font-bold text-lg text-white">
+        <span className="text-2xl">📚</span>
         <span>Toko Buku</span>
       </div>
 
       {/* Navigasi */}
-      <nav className="flex flex-col gap-1">
+      <nav className="flex flex-col gap-1.5">
         {navItems.map((item) => (
           <NavLink
             key={item.path}
             to={item.path}
             end={item.path === '/'}
             className={({ isActive }) =>
-              `px-4 py-2.5 rounded-lg text-sm transition-colors duration-150 ${
+              `px-4 py-2.5 rounded-xl text-sm transition-all duration-200 font-medium ${
                 isActive
-                  ? 'bg-gray-300 text-gray-900 font-bold shadow-sm'
-                  : 'text-gray-700 hover:bg-gray-200 hover:text-gray-900 font-normal'
+                  ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/30 font-semibold'
+                  : 'text-slate-400 hover:bg-slate-800 hover:text-slate-100'
               }`
             }
           >
